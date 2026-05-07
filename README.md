@@ -8,6 +8,8 @@ Game modes: the modes and rules from the real paintball game will be taken over 
 
 Godot Engine Version >= 4.7.x
 
+[![Everything Is AWESOME](]([https://www.youtube.com/watch?v=PEI4R4YKWRM](https://youtu.be/PEI4R4YKWRM) "Building a Paintball Game in Godot Engine: Workflow - Open Source Version #godot #godotengine")
+
 <b>Custom 3d character animated collision</b>
 <img src="https://raw.githubusercontent.com/axenteflorin24/Godot-Engine-Paintball-Game-Project/refs/heads/main/Screenshots/hit_boxes.jpg" />
 
