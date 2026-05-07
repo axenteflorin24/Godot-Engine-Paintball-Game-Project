@@ -6,7 +6,7 @@ Description: Offline paintball shooter game. In the game there are two teams of 
 
 Game modes: the modes and rules from the real paintball game will be taken over plus practical minigames - shoot the targets .
 
-Godot Engine Versio >= 4.7.x
+Godot Engine Version >= 4.7.x
 
 <b>Custom 3d character animated collision</b>
 <img src="https://raw.githubusercontent.com/axenteflorin24/Godot-Engine-Paintball-Game-Project/refs/heads/main/Screenshots/hit_boxes.jpg" />
