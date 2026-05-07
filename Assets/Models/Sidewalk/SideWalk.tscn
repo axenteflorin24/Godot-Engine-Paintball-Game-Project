@@ -1,0 +1,60 @@
+[gd_scene format=4 uid="uid://c6ll4cocyh7wh"]
+
+[ext_resource type="Shader" uid="uid://bpivdf5xxv4wg" path="res://Assets/Models/Scenes/Area1/Scripts/terrain_b_tscn/terrain_b.gdshader" id="1_12je2"]
+[ext_resource type="Texture2D" uid="uid://c2sphx00dtk2k" path="res://Assets/Models/Scenes/Area1/Textures/Terrain/concrete.png" id="2_4q7eo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_busfr"]
+render_priority = 0
+shader = ExtResource("1_12je2")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_4q7eo")
+shader_parameter/cubic_a = 3.8
+shader_parameter/cubic_b = 8.0
+shader_parameter/uv_scale_x = 36.0
+shader_parameter/uv_scale_y = 36.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rxivf"]
+_surfaces = [{
+"aabb": AABB(0.822003, -1, -0.9006402, 0.177997, 2, 0.9006402),
+"format": 34896613377,
+"index_count": 21,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAAFAAAABQAEAAYABwAFAAYABwAIAAUA"),
+"name": "Material.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("AAD+////AAAAAJkZFwAAAAAA/v8XAAAAAACZGf//AADFAP7/AQAAAP///////wAA/////wEAAAD//wAAAAAAAP//AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tvhox"]
+resource_name = "Untitled_Cube_002"
+_surfaces = [{
+"aabb": AABB(0.822003, -1, -0.9006402, 0.177997, 2, 0.9006402),
+"attribute_data": PackedByteArray("1qAWgPGe3z84oN8/jp8WgPKnHIA+oNk/TKfgP9agFoA4oN8/k6jfP/KnHIBMp+A/OqkcgA=="),
+"format": 34896613399,
+"index_count": 21,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABQAEAAcABQAHAAgACQAKAAsACQAMAAoA"),
+"material": SubResource("ShaderMaterial_busfr"),
+"name": "Material.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("AAD+////VNUAAJkZFwBU1QAA/v8XAFTVAACZGf//VNX/////////v8UA/v8BAP+//////wEA/78AAP7/////vwAA/v8XAP+///8AAAAAVNX///////9U1f////8BAFTV//8AAP//VNVU1VTVVNVU1VTVVNVU1VTV3f+8f93/u3/d/7x/3f+8f9z/u3+qqlRVqqpUVaqqVFWqqlRV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rxivf")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_r64yl"]
+data = PackedVector3Array(0.82199997, 1, 0, 0.82199997, -0.79999995, -0.90029997, 0.82199997, 1, -0.90029997, 0.82199997, 1, 0, 0.82199997, -0.79999995, 0, 0.82199997, -0.79999995, -0.90029997, 1, 1, 0, 0.8225, 1, -0.90059996, 1, 1, -0.90059996, 0.8225, 1, -0.90059996, 1, 1, 0, 0.82199997, 1, 0, 0.8225, 1, -0.90059996, 0.82199997, 1, 0, 0.82199997, 1, -0.90029997, 1, -1, -0.90059996, 1, 1, 0, 1, 1, -0.90059996, 1, -1, -0.90059996, 1, -1, 0, 1, 1, 0)
+
+[node name="sidewalk_" type="Node3D" unique_id=219996409]
+
+[node name="mesh" type="MeshInstance3D" parent="." unique_id=552831624]
+transform = Transform3D(2.8, 0, 0, 0, 0.05, 0, 0, 0, 5, -0.00982666, 3.1624303, -0.014160156)
+mesh = SubResource("ArrayMesh_tvhox")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="mesh" unique_id=531224674]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mesh/StaticBody3D" unique_id=910448679]
+shape = SubResource("ConcavePolygonShape3D_r64yl")
