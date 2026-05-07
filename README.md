@@ -10,7 +10,7 @@ Game modes: the modes and rules from the real paintball game will be taken over 
 <img src="https://raw.githubusercontent.com/axenteflorin24/Godot-Engine-Paintball-Game-Project/refs/heads/main/Screenshots/hit_boxes.jpg" />
 
 
-<b>Screenshots</b>
+<b>Scene Screenshots</b>
 
 <img src="https://raw.githubusercontent.com/axenteflorin24/Godot-Engine-Paintball-Game-Project/refs/heads/main/Screenshots/screenshot_1.jpg" />
 
