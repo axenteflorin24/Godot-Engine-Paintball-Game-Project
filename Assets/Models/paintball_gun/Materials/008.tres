@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bekp3ice1dk6p"]
+
+[ext_resource type="Texture2D" uid="uid://o3okj10ybarc" path="res://Assets/Models/paintball_gun/Textures/texture_plastic_diffuse.png" id="1_y4iym"]
+[ext_resource type="Texture2D" uid="uid://bs2rox562eo4d" path="res://Assets/Models/paintball_gun/Textures/texture_plastic_metalic.png" id="2_pkss5"]
+[ext_resource type="Texture2D" uid="uid://b0crtq5go8sb7" path="res://Assets/Models/paintball_gun/Textures/texture_plastic_normal_map.png" id="3_drrev"]
+[ext_resource type="Texture2D" uid="uid://bpq43bdusky35" path="res://Assets/Models/paintball_gun/Textures/texture_plastic_roughness.png" id="4_xgdnn"]
+
+[resource]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_y4iym")
+metallic = 1.0
+metallic_texture = ExtResource("2_pkss5")
+roughness_texture = ExtResource("4_xgdnn")
+normal_enabled = true
+normal_texture = ExtResource("3_drrev")

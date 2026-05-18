@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnyyej0dcn28q"]
+
+[ext_resource type="Texture2D" uid="uid://ddir8ep7wrhjs" path="res://Assets/Models/paintball_gun/Textures/spotted-rust_metallic.png" id="1_06e4f"]
+[ext_resource type="Texture2D" uid="uid://2sou8asv8jc6" path="res://Assets/Models/paintball_gun/Textures/spotted-rust_normal.png" id="2_i6ue2"]
+[ext_resource type="Texture2D" uid="uid://bnwonyheoswhu" path="res://Assets/Models/paintball_gun/Textures/spotted-rust_roughness.png" id="3_h8iki"]
+
+[resource]
+resource_name = "material_002"
+cull_mode = 2
+albedo_color = Color(0.682353, 0.235294, 0.356863, 1)
+metallic = 1.0
+metallic_specular = 0.08
+metallic_texture = ExtResource("1_06e4f")
+roughness_texture = ExtResource("3_h8iki")
+normal_enabled = true
+normal_scale = 3.26
+normal_texture = ExtResource("2_i6ue2")
