@@ -165,45 +165,48 @@ func check_node(_Node, Name):
 		
 func gun_action():
 	
-	if $Timers/bullets_animation.is_stopped():
-			$bulet_animation.play("bullet_transparency")
-	
-	if not $CrossHair/CrossHairTexture.ray_collinder == 'player':
-			
-		if Input.is_action_just_pressed("action"):
-			
-			$Timers/bullets_animation.start()
-			if $Timers/look_up.is_stopped():
-				$Timers/look_up.start()
-			
-			if $Timers/action.is_stopped():
-				$Timers/action_wait.start()
+	if not Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_backwards"):
+		if $Timers/bullets_animation.is_stopped():
 				
-				update_action_animations('apply')	
-			
-			if $Timers/action_wait.is_stopped():
+				$bulet_animation.play("bullet_transparency")
+		
+		if not $CrossHair/CrossHairTexture.ray_collinder == 'player':
 				
-				$bulet_animation.play("bulet_animation")
+			if Input.is_action_just_pressed("action"):
 				
-				bullets_counter = bullets_counter+1
+				$Timers/bullets_animation.start()
+				if $Timers/look_up.is_stopped():
+					$Timers/look_up.start()
 				
-				var _bullet = bullet.instantiate()
-				
-				_bullet.name = name_generator()
-				
-				
-				if not check_node(BulletSpawnLocation, _bullet.name):
+				if $Timers/action.is_stopped():
+					$Timers/action_wait.start()
 					
-					BulletSpawnLocation.add_child(_bullet)
-					bullet_sounds[randi_range(0, bullet_sounds.size()-1)].play()
-
-
-
-			$Timers/action.set("wait_time" , 1.368)
-			$Timers/action.start()
+					update_action_animations('apply')	
 				
-		if not $Timers/look_up.is_stopped():
-			$Armature.rotation.y = lerp_angle($Armature.rotation.y, spring_arm_pivot.rotation.y+deg_to_rad(180), 0.138)
+				
+				if $Timers/action_wait.is_stopped():
+					
+					$bulet_animation.play("bulet_animation")
+					
+					bullets_counter = bullets_counter+1
+					
+					var _bullet = bullet.instantiate()
+					
+					_bullet.name = name_generator()
+					
+					
+					if not check_node(BulletSpawnLocation, _bullet.name):
+						
+						BulletSpawnLocation.add_child(_bullet)
+						bullet_sounds[randi_range(0, bullet_sounds.size()-1)].play()
+
+
+
+				$Timers/action.set("wait_time" , 1.368)
+				$Timers/action.start()
+					
+			if not $Timers/look_up.is_stopped():
+				$Armature.rotation.y = lerp_angle($Armature.rotation.y, spring_arm_pivot.rotation.y+deg_to_rad(180), 0.138)
 
 
 
@@ -246,6 +249,7 @@ func movement(delta):
 	velocity.y -= gravity * delta
 	
 	if Input.is_action_pressed("run"):
+		
 		if prone:
 			
 			speed = prone_speed
@@ -336,7 +340,6 @@ func movement_animations(delta):
 							
 							player_status = 'player_running'
 							animator.set("parameters/iwr_blend/blend_amount", lerp(animator.get("parameters/iwr_blend/blend_amount"), 1.0, delta * ANIMATION_BLEND))
-					
 			else:
 				if prone == true:
 					player_status = 'prone_walking'
@@ -348,6 +351,7 @@ func movement_animations(delta):
 						else:
 							player_status = 'player_walking'
 							animator.set("parameters/iwr_blend/blend_amount", lerp(animator.get("parameters/iwr_blend/blend_amount"), 0.0, delta * ANIMATION_BLEND))
+		
 		else:
 			
 			if prone == true:
@@ -379,6 +383,7 @@ func movement_animations(delta):
 				player_status = 'crounching_jump'
 				animator.set("parameters/Crounching/transition_request", "jump")
 		else:
+			
 			if global_position.y <= 0.25:
 				if global_position.y > 0.18:
 					player_status = 'player_jump'
