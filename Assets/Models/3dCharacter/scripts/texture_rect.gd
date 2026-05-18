@@ -45,25 +45,33 @@ func _process(delta: float) -> void:
 	var space_state = $"../../SpringArmPivot/SpringArm3D/Camera3D".get_world_3d().direct_space_state
 	var result = space_state.intersect_ray(query)
 	
-
-
 	
 	if result:
 		
-		if result.collider.name == 'player':
-				
-			set("texture", crosshair_dissabled_texture)
+		if Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right") or Input.is_action_pressed("move_backwards"):
+			
+			set("texture", crosshair_dissabled_texture)	
 		
 		else:
 			
-			if result.collider.name.split('_')[0] == 'AIPlayer':
-				set("texture", crosshair_action_texture)
+			if result.collider.name == 'player':
+					
+				set("texture", crosshair_dissabled_texture)
+			
 			else:
-				set("texture", crosshair_texture)
+				
+				if result.collider.name.split('_')[0] == 'AIPlayer':
+					set("texture", crosshair_action_texture)
+				else:
+					set("texture", crosshair_texture)
+		
+			
 		ray_collinder = result.collider.name
+		
 		ray_coordinate = result.position
 	
 	else:
+		
 		ray_collinder = 'player'
 		set("texture", crosshair_dissabled_texture)
 
@@ -71,6 +79,7 @@ func _process(delta: float) -> void:
 func new_raycast():
 	
 	if Input.is_action_just_pressed("action"):
+		
 		
 		var crosshair_pos = $".".global_position
 		
@@ -82,9 +91,13 @@ func new_raycast():
 		var query = PhysicsRayQueryParameters3D.create(origin, end)
 		
 		var space_state = $"../../SpringArmPivot/SpringArm3D/Camera3D".get_world_3d().direct_space_state
+		
 		var result = space_state.intersect_ray(query)
 		
 		if result:
-
 			_ray_coordinate = result.position
+			
+			
+			
+			
 			
