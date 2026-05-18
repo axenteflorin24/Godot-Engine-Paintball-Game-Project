@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://822y0fj8fpme"]
+
+[ext_resource type="Script" uid="uid://bt3ukaagpiimi" path="res://Assets/Models/paintball_gun/Scripts/bullet.gd" id="1_p6s1u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6s1u"]
+albedo_color = Color(0.9490196, 0.37254903, 0, 1)
+metallic = 0.36
+metallic_specular = 0.16
+roughness = 0.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_p6s1u"]
+resource_local_to_scene = true
+radius = 0.01
+height = 0.02
+radial_segments = 18
+rings = 8
+
+[node name="bullet" type="MeshInstance3D" unique_id=2030929161]
+material_override = SubResource("StandardMaterial3D_p6s1u")
+transparency = 1.0
+mesh = SubResource("SphereMesh_p6s1u")
+script = ExtResource("1_p6s1u")
+
+[node name="lifetime" type="Timer" parent="." unique_id=2099869192]
+wait_time = 4.680000000000001
+one_shot = true
+autostart = true
+
+[node name="visibility" type="Timer" parent="." unique_id=1961727383]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1493022955]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 2, 0, 0, -0.059800148)
+target_position = Vector3(0, 0, 2.68)
+
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]
+[connection signal="timeout" from="visibility" to="." method="_on_visibility_timeout"]
