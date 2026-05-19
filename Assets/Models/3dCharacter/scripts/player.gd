@@ -403,9 +403,9 @@ func CollisionsSync():
 		$player_collision.global_position.y = $Armature/Skeleton3D/Animated_collision_hips/Animated_collision_hips.global_position.y+0.18
 	else:
 		if crounching:
-			$player_collision.global_position.y = $Armature/Skeleton3D/Animated_collision_hips/Animated_collision_hips.global_position.y
+			$player_collision.global_position.y = $Armature/Skeleton3D/Animated_collision_hips/Animated_collision_hips.global_position.y-0.18
 		else:
-			$player_collision.global_position.y = $Armature/Skeleton3D/Animated_collision_hips/Animated_collision_hips.global_position.y
+			$player_collision.global_position.y = $Armature/Skeleton3D/Animated_collision_hips/Animated_collision_hips.global_position.y-0.18
 	
 	for row in CustomCollisions:
 		
