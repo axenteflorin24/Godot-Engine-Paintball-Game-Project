@@ -2,6 +2,12 @@
 
 <b><span style="color:#883333">Status: in development and update of changes</span></b>
 
+<b>05/30/2026 - The term "Logical State" is added - this is the player's brain and his subsequent actions are generated here based on statistics stored in global variables. Currently it is set to go to random locations to track if he bumps into objects and the default unlocking mechanism works.
+
+Warning! This project is open source, these examples are basic and for educational use to generate your own mechanisms and save time creating them, and are not a final product ready for sale.</b>
+
+<img src="https://raw.githubusercontent.com/axenteflorin24/Godot-Engine-Paintball-Game-Project/refs/heads/main/Screenshots/screenshot_6.jpg" />
+
 <b>05/18/2026 - New updates for this project, basic animations, gun and bullet have been added. The target is hit and counted only if it is touched by a moving 3d spherical bullet. The next and final update for this project will be with a mechanism system for AI players.</b>
 
 <img src="https://raw.githubusercontent.com/axenteflorin24/Godot-Engine-Paintball-Game-Project/refs/heads/main/Screenshots/screenshot_5.jpg" />
