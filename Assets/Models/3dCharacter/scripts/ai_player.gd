@@ -312,8 +312,8 @@ func stop_navigation():
 
 func logical_state():
 	player_status == "random_walk"
-	if(player_walking_counter>600):
-		player_status = "stop"	
+	#if(player_walking_counter>368):
+		#player_status = "stop"	
 
 
 
