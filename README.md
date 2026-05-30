@@ -2,7 +2,7 @@
 
 <b><span style="color:#883333">Status: in development and update of changes</span></b>
 
-<b>05/30/2026 - The term "Logical State" is added - this is the player's brain and his subsequent actions are generated here based on statistics stored in global variables. Currently it is set to go to random locations to track if he bumps into objects and the default unlocking mechanism works.
+<b>05/30/2026 - The term "Logical State" is added - this is the ai player's brain and his subsequent actions are generated here based on statistics stored in global variables. Currently it is set to go to random locations to track if he bumps into objects and the default unlocking mechanism works.
 
 Warning! This project is open source, these examples are basic and for educational use to generate your own mechanisms and save time creating them, and are not a final product ready for sale.</b>
 
