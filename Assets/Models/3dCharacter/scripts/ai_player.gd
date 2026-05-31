@@ -28,6 +28,7 @@ var SCENE = null
 @export var movement_pos = Vector3(0.0, 0.0, 0.0)
 
 var _movemen_pos = Vector3.ZERO
+
 var exit_point = Vector3.ZERO
 
 @export var entered_area = 'none'
@@ -47,7 +48,6 @@ var random_locations = []
 var random_locations_size = 0
 var wait_time = 0.0
 var _stored_wait_time = 0.0
-
 var safe_movement = false
 var stored_d = 0.0 
 var counts_d = 0
@@ -57,13 +57,17 @@ var counts_d = 0
 
 
 var safe_movents_applied = 0
+
+
 var runs = 0
 var player_walking_counter = 0.0
 
-
+@export var speed = 1.5
+@export var turn_speed = 2.0
 func _ready():
 	init_custom_collisions()
 	animator.set("parameters/transitions/transition_request", "idle")
+	
 	
 	entered_area = 'none'
 
@@ -93,7 +97,14 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	
+func look_at_lerp(target_position: Vector3, delta: float):
+
+	var direction = (target_position - global_position).normalized()
+	var target_rotation = atan2(-direction.x, -direction.z)
+
+
+	global_rotation.y = lerp_angle(global_rotation.y, target_rotation, delta * turn_speed)	
+
 func _movement(pos, speed = 2.68):
 	var d = global_position.distance_to(pos)
 	
@@ -102,7 +113,14 @@ func _movement(pos, speed = 2.68):
 	
 		
 	var direction = (pos - global_position).normalized()
-	
+
+	if not velocity == Vector3.ZERO:
+		if entered_area == 'true' or entered_area == 'false':
+			look_at_lerp(Vector3(exit_point.x, global_position.y, exit_point.z), _delta)
+		
+		if entered_area == 'none':
+			look_at_lerp(Vector3(movement_pos.x, global_position.y, movement_pos.z), _delta)	
+		
 	velocity = direction*speed
 					
 	global_position.x += velocity.x * _delta
@@ -113,6 +131,7 @@ func movement():
 	var _d_to_point = global_position.distance_to(movement_pos)
 	if 	_d_to_point > 0.068:
 
+		
 		if not animator.get("parameters/transitions/current_state") == 'walking':
 			animator.set("parameters/transitions/transition_request", "walking")
 	else:	
@@ -124,7 +143,7 @@ func movement():
 		if _entered_area == false:
 			_entered_area = true
 			exit_point =  SCENE.get_exit_point(entered_area_name, global_position)
-			look_at(Vector3(exit_point.x, global_position.y, exit_point.z))
+			
 			
 		
 			var _exit_point =  SCENE.get_next_exit_point(entered_area_name, exit_point)
@@ -132,6 +151,7 @@ func movement():
 			_exit_point.sort()
 			
 			_exit_point = _exit_point[1][1]
+			
 			var d_x = movement_pos.distance_to(exit_point)
 			var d_y = movement_pos.distance_to(_exit_point)
 			
@@ -147,9 +167,10 @@ func movement():
 	if skip_exit_point:
 		skip_exit_point = false
 		entered_area = 'none'
+	
 	else:
 		if entered_area == 'false' and safe_movement == true:
-			look_at(Vector3(movement_pos.x, global_position.y, movement_pos.z))
+			
 			
 
 				
@@ -162,32 +183,29 @@ func movement():
 						
 					exit_point.sort()
 					exit_point = exit_point[1][1]
-					look_at(Vector3(exit_point.x, global_position.y, exit_point.z))
+					
 			
 			_movement(Vector3(exit_point.x, global_position.y, exit_point.z), 1.68)
 				
 				
 				
 			if velocity == Vector3.ZERO:
-						
 				entered_area = 'none'	
+				
 						
 			
 		
 		
 		
 	if entered_area == 'none':
-		
-		if Vector3.ZERO.distance_to(velocity) > 0.1:
-			look_at(Vector3(movement_pos.x, global_position.y, movement_pos.z))
-		
-		
+
 		_movement(movement_pos, 1.68)
 		
 		
 		if velocity == Vector3.ZERO:
-			entered_area = 'none'	
 			
+
+			entered_area = 'none'	
 			entered_area_name = 'None'
 	
 	pass
@@ -249,6 +267,7 @@ func init_scene():
 			break
 			
 	array = ROOT.get_children()
+	
 	for row in array:
 		if row.name.split('_')[0] == 'scene':
 			
@@ -271,8 +290,8 @@ func init_random_locations():
 func random_navigation():
 	var d = 99.99
 	
-	
 	d = global_position.distance_to(movement_pos)
+
 
 	if d <= 0.08:
 
@@ -281,7 +300,7 @@ func random_navigation():
 				
 			if wait_time >= _stored_wait_time and _stored_wait_time > 0.0:
 				runs = runs+1
-				print('SAFE: ', safe_movents_applied, ' - RUNS: ', runs)
+				
 				
 				
 				safe_movement = true
@@ -312,8 +331,8 @@ func stop_navigation():
 
 func logical_state():
 	player_status == "random_walk"
-	#if(player_walking_counter>368):
-		#player_status = "stop"	
+	if(player_walking_counter>287):
+		player_status = "stop"	
 
 
 
