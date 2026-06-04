@@ -1,0 +1,1663 @@
+[gd_scene format=3 uid="uid://c5i71edp2v2yb"]
+
+[ext_resource type="Script" uid="uid://1t7kskky2e3l" path="res://Scenes/Scene_1/Scripts/scene_1.gd" id="1_ige0u"]
+[ext_resource type="PackedScene" uid="uid://bsroyvn17oxvj" path="res://Assets/Models/Scenes/Area1/terrain.tscn" id="2_wark2"]
+[ext_resource type="PackedScene" uid="uid://dlreeeiyf4d84" path="res://Assets/Models/BNK/bnk_brick/bnk_big_brick.tscn" id="3_oetun"]
+[ext_resource type="PackedScene" uid="uid://cqudmdpjhxqef" path="res://Assets/Models/BNK/bnk_beam/beam_bnk.tscn" id="4_k0m6b"]
+[ext_resource type="PackedScene" uid="uid://dsde5dqxgpea4" path="res://Assets/Models/obstacle/COMP.tscn" id="5_4vqcr"]
+[ext_resource type="PackedScene" uid="uid://brpsclim1t8xg" path="res://Assets/Models/obstacle/PLAYER.tscn" id="6_gxqo3"]
+[ext_resource type="PackedScene" uid="uid://clh34c0quwikt" path="res://Assets/Models/BNK/bnk_Millenium/bnk_millenium.tscn" id="7_08acx"]
+[ext_resource type="PackedScene" uid="uid://cf0trxwgrt4si" path="res://Assets/Models/BNK/bnk_x/bnk_x.tscn" id="8_03cav"]
+[ext_resource type="PackedScene" uid="uid://beftcjrfqsms" path="res://Assets/Models/BNK/bnk_dorrito/bnk_dorrito_deffault.tscn" id="9_ebfgr"]
+[ext_resource type="PackedScene" uid="uid://72633d7twakq" path="res://Assets/Models/BNK/bnk_brick/brick_medium_c_bnk.tscn" id="10_yoqlw"]
+[ext_resource type="AudioStream" uid="uid://bb73i5nn742sv" path="res://Assets/sfx/ambiental.mp3" id="11_d735r"]
+[ext_resource type="Script" uid="uid://b5uuk3ef01xos" path="res://Assets/sfx/Scripts/ambiental.gd" id="12_rmtia"]
+[ext_resource type="Script" uid="uid://bd0eucigt4iei" path="res://Scenes/Scene_1/sub_viewport.gd" id="13_7ng22"]
+[ext_resource type="Script" uid="uid://ds8i6820o4poo" path="res://Scenes/Scene_1/Scripts/Area3d_array.gd" id="14_jl51y"]
+[ext_resource type="PackedScene" uid="uid://doera45vm8v62" path="res://Assets/Models/3dCharacter/ai_player.tscn" id="15_bfk50"]
+[ext_resource type="PackedScene" uid="uid://b7ahk5s5cwvak" path="res://Assets/Models/3dCharacter/player.tscn" id="16_h0dtm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kui3j"]
+sky_top_color = Color(0.5232426, 0.66630906, 0.99017805, 1)
+sky_curve = 0.009374981
+ground_curve = 0.050982527
+sun_angle_max = 9.62
+sun_curve = 0.102453016
+
+[sub_resource type="Sky" id="Sky_5ngqa"]
+sky_material = SubResource("ProceduralSkyMaterial_kui3j")
+
+[sub_resource type="Environment" id="Environment_ahmme"]
+background_mode = 2
+background_energy_multiplier = 0.9
+sky = SubResource("Sky_5ngqa")
+tonemap_mode = 3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kui3j"]
+size = Vector3(5.874546, 1, 1.5556335)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v40pp"]
+size = Vector3(6.085274, 1, 1.8686819)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jlvy3"]
+size = Vector3(18.54847, 1, 4.334221)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u564y"]
+size = Vector3(18.54847, 1, 4.334221)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hlfht"]
+size = Vector3(4.0439534, 1, 2.3771172)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lf3vb"]
+size = Vector3(4.0439534, 1, 2.3011894)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2s5g"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_15syj"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e355t"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uk74c"]
+size = Vector3(4.0439534, 1, 2.3475761)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30vb3"]
+size = Vector3(4.0439534, 1, 2.3730278)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7us3"]
+size = Vector3(4.0439534, 1, 2.4258232)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wwnl"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gg83"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l2keh"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8tiih"]
+size = Vector3(4.0439534, 1, 2.5115166)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8at4v"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6g3sy"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t5pm8"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gmeeg"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mto4t"]
+size = Vector3(4.0439534, 1, 2.4667778)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oy21u"]
+size = Vector3(4.0439534, 1, 2.5566826)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lelf"]
+size = Vector3(4.0439534, 1, 2.422161)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i201o"]
+size = Vector3(4.0439534, 1, 2.5879326)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2q4jp"]
+size = Vector3(4.0439534, 1, 2.5698662)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aru28"]
+size = Vector3(4.0439534, 1, 2.4124355)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gflku"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yesqg"]
+size = Vector3(4.0439534, 1, 3.7937849)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebf02"]
+size = Vector3(4.9333196, 1, 4.538839)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7b12v"]
+size = Vector3(2.0324326, 1, 2.10848)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b6mrq"]
+size = Vector3(1.6049654, 1, 1.742564)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wwd1l"]
+size = Vector3(1.6049654, 1, 1.742564)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_krixw"]
+size = Vector3(2.2540512, 1, 2.1533408)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xnnfk"]
+size = Vector3(1.4980168, 1, 1.742564)
+
+[node name="scene_1" type="Node3D" unique_id=2100328954]
+script = ExtResource("1_ige0u")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1011019605]
+environment = SubResource("Environment_ahmme")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1174683232]
+transform = Transform3D(-0.866026, -0.433013, 0.249999, 0.5, -0.75, 0.433012, -1.3411e-07, 0.499999, 0.866026, 0, 0, 0)
+light_energy = 1.25
+shadow_enabled = true
+directional_shadow_split_1 = 0.07
+directional_shadow_split_2 = 0.12
+directional_shadow_split_3 = 0.2
+directional_shadow_blend_splits = true
+
+[node name="ReflectedLight3D" type="DirectionalLight3D" parent="." unique_id=808138883]
+transform = Transform3D(0.9136774, 0.39292073, 0.1039558, 0.27742216, -0.415977, -0.86602545, -0.29703617, 0.82010746, -0.48907378, 0, -0.018310547, 0)
+light_energy = 0.65
+directional_shadow_split_1 = 0.07
+directional_shadow_split_2 = 0.12
+directional_shadow_split_3 = 0.2
+directional_shadow_blend_splits = true
+sky_mode = 1
+
+[node name="terrain" parent="." unique_id=1373071240 instance=ExtResource("2_wark2")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.3220111, -0.3, 2.387)
+metadata/_edit_lock_ = true
+
+[node name="BrickBigArray_001" type="Node3D" parent="." unique_id=341121578]
+metadata/_edit_lock_ = true
+
+[node name="001" parent="BrickBigArray_001" unique_id=1044195438 instance=ExtResource("3_oetun")]
+transform = Transform3D(0.999997, 0.0024350244, 0, -0.0024350244, 0.999997, 0, 0, 0, 1, -2.7116013, -0.075805664, 35.79065)
+metadata/_edit_lock_ = true
+
+[node name="002" parent="BrickBigArray_001" unique_id=1844707583 instance=ExtResource("3_oetun")]
+transform = Transform3D(0.999997, 0.0024350244, 0, -0.0024350244, 0.999997, 0, 0, 0, 1, 2.4883041, -0.075805664, 35.79065)
+metadata/_edit_lock_ = true
+
+[node name="003" parent="BrickBigArray_001" unique_id=1850292713 instance=ExtResource("3_oetun")]
+transform = Transform3D(0.999997, 0.0024350244, 0, -0.0024350244, 0.999997, 0, 0, 0, 1, -7.683716, -0.075805664, 37.19928)
+metadata/_edit_lock_ = true
+
+[node name="004" parent="BrickBigArray_001" unique_id=1770959343 instance=ExtResource("3_oetun")]
+transform = Transform3D(0.999997, 0.0024350244, 0, -0.0024350244, 0.999997, 0, 0, 0, 1, 7.4546204, -0.075805664, 37.19928)
+metadata/_edit_lock_ = true
+
+[node name="005" parent="BrickBigArray_001" unique_id=1180662685 instance=ExtResource("3_oetun")]
+transform = Transform3D(-0.9999873, -0.002435001, 0.0044357777, -0.0024350248, 0.99999726, -1.45146525e-11, -0.0044357814, -1.0801261e-05, -0.9999901, 2.5844944, -0.075805664, -30.909101)
+metadata/_edit_lock_ = true
+
+[node name="006" parent="BrickBigArray_001" unique_id=225299175 instance=ExtResource("3_oetun")]
+transform = Transform3D(-0.9999873, -0.002435001, 0.0044357777, -0.0024350248, 0.99999726, -1.45146525e-11, -0.0044357814, -1.0801261e-05, -0.9999901, -2.6153598, -0.075805664, -30.932167)
+metadata/_edit_lock_ = true
+
+[node name="007" parent="BrickBigArray_001" unique_id=2134976146 instance=ExtResource("3_oetun")]
+transform = Transform3D(-0.9999873, -0.002435001, 0.0044357777, -0.0024350248, 0.99999726, -1.45146525e-11, -0.0044357814, -1.0801261e-05, -0.9999901, 7.56281, -0.075805664, -32.295662)
+metadata/_edit_lock_ = true
+
+[node name="008" parent="BrickBigArray_001" unique_id=484762731 instance=ExtResource("3_oetun")]
+transform = Transform3D(-0.9999873, -0.002435001, 0.0044357777, -0.0024350248, 0.99999726, -1.45146525e-11, -0.0044357814, -1.0801261e-05, -0.9999901, -7.575379, -0.075805664, -32.362812)
+metadata/_edit_lock_ = true
+
+[node name="BeamArray_001" type="Node3D" parent="." unique_id=932389834]
+metadata/_edit_lock_ = true
+
+[node name="001" parent="BeamArray_001" unique_id=2090018074 instance=ExtResource("4_k0m6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11201692, 0.12525472, 35.776543)
+
+[node name="002" parent="BeamArray_001" unique_id=377502522 instance=ExtResource("4_k0m6b")]
+transform = Transform3D(0.8918168, 0, 0.45239675, 0, 1, 0, -0.45239675, 0, 0.8918168, -5.177614, 0.06299889, 36.483574)
+
+[node name="003" parent="BeamArray_001" unique_id=512449065 instance=ExtResource("4_k0m6b")]
+transform = Transform3D(0.89179754, 0, -0.45243472, 0, 1, 0, 0.45243472, 0, 0.89179754, 4.958647, 0.06299889, 36.483574)
+
+[node name="004" parent="BeamArray_001" unique_id=939426454 instance=ExtResource("4_k0m6b")]
+transform = Transform3D(-0.99999017, 0, 0.0044357907, 0, 1, 0, -0.0044357907, 0, -0.99999017, -0.015126532, 0.12525472, -30.906527)
+
+[node name="005" parent="BeamArray_001" unique_id=1295038820 instance=ExtResource("4_k0m6b")]
+transform = Transform3D(-0.8938148, 0, -0.44843638, 0, 1, 0, 0.44843638, 0, -0.8938148, 5.0535574, 0.06299889, -31.591082)
+
+[node name="006" parent="BeamArray_001" unique_id=1170195442 instance=ExtResource("4_k0m6b")]
+transform = Transform3D(-0.8897819, 0, 0.45638612, 0, 1, 0, -0.45638612, 0, -0.8897819, -5.082604, 0.06299889, -31.636042)
+
+[node name="obstacle" parent="." unique_id=1771896307 instance=ExtResource("5_4vqcr")]
+transform = Transform3D(0.02376467, 0, 0.9997176, 0, 1, 0, -0.9997176, 0, 0.02376467, 0.14419556, -0.00012207031, 40.853428)
+metadata/_edit_lock_ = true
+
+[node name="obstacle2" parent="." unique_id=182660785 instance=ExtResource("6_gxqo3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.020532608, 0, -35.81299)
+metadata/_edit_lock_ = true
+
+[node name="bnk_millenium" parent="." unique_id=2130446444 instance=ExtResource("7_08acx")]
+transform = Transform3D(1.0997564, 0, 0.023150519, 0, 1.1, 0, -0.023150519, 0, 1.0997564, -0.037085533, 0.277605, 3.5925715)
+metadata/_edit_lock_ = true
+
+[node name="XArray_001" type="Node3D" parent="." unique_id=1563832667]
+metadata/_edit_lock_ = true
+
+[node name="001" parent="XArray_001" unique_id=1189476815 instance=ExtResource("8_03cav")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.209575, 0.10411656, -28.598925)
+metadata/_edit_lock_ = true
+
+[node name="002" parent="XArray_001" unique_id=1548007779 instance=ExtResource("8_03cav")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.097794, 0.10411656, -28.598925)
+metadata/_edit_lock_ = true
+
+[node name="003" parent="XArray_001" unique_id=886562649 instance=ExtResource("8_03cav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.209575, 0.10411656, 32.154045)
+metadata/_edit_lock_ = true
+
+[node name="004" parent="XArray_001" unique_id=645074470 instance=ExtResource("8_03cav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.097794, 0.10411656, 32.154045)
+metadata/_edit_lock_ = true
+
+[node name="DorritoArray_001" type="Node3D" parent="." unique_id=208061416]
+metadata/_edit_lock_ = true
+
+[node name="001" parent="DorritoArray_001" unique_id=845594226 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.247936, 0.055643316, -20.771244)
+metadata/_edit_lock_ = true
+
+[node name="002" parent="DorritoArray_001" unique_id=621106324 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2092495, 0.055643316, -20.771244)
+metadata/_edit_lock_ = true
+
+[node name="003" parent="DorritoArray_001" unique_id=309359871 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.476997, 0.055643316, -7.1802673)
+metadata/_edit_lock_ = true
+
+[node name="004" parent="DorritoArray_001" unique_id=495740188 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.553844, 0.055643316, -7.1802673)
+metadata/_edit_lock_ = true
+
+[node name="005" parent="DorritoArray_001" unique_id=1186698048 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, 11.116106, 0.055643316, 23.736668)
+metadata/_edit_lock_ = true
+
+[node name="006" parent="DorritoArray_001" unique_id=732697829 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, -10.327812, 0.055643316, 24.491117)
+metadata/_edit_lock_ = true
+
+[node name="007" parent="DorritoArray_001" unique_id=1406810518 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, -17.069551, 0.055643316, 11.128923)
+metadata/_edit_lock_ = true
+
+[node name="008" parent="DorritoArray_001" unique_id=1354422349 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, 15.940865, 0.055643316, 9.967535)
+metadata/_edit_lock_ = true
+
+[node name="009" parent="DorritoArray_001" unique_id=405871248 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, 1.4318075, 0.055643316, -7.858556)
+metadata/_edit_lock_ = true
+
+[node name="010" parent="DorritoArray_001" unique_id=452441066 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, -9.67602, 0.055643316, 2.979559)
+metadata/_edit_lock_ = true
+
+[node name="011" parent="DorritoArray_001" unique_id=581740888 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, 8.629997, 0.055643316, 2.979559)
+metadata/_edit_lock_ = true
+
+[node name="012" parent="DorritoArray_001" unique_id=1327527993 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, -1.1152325, 0.055643316, -24.072931)
+metadata/_edit_lock_ = true
+
+[node name="013" parent="DorritoArray_001" unique_id=1629830457 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, -1.1152325, 0.055643316, 30.784307)
+metadata/_edit_lock_ = true
+
+[node name="014" parent="DorritoArray_001" unique_id=836726750 instance=ExtResource("9_ebfgr")]
+transform = Transform3D(-0.99938166, 0, -0.035160728, 0, 1, 0, 0.035160728, 0, -0.99938166, 0.6999903, 0.055643316, 17.938189)
+metadata/_edit_lock_ = true
+
+[node name="BrickMediumArray_001" type="Node3D" parent="." unique_id=517813300]
+metadata/_edit_lock_ = true
+
+[node name="001" parent="BrickMediumArray_001" unique_id=10890946 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1317015, 0.00012207031, -17.454407)
+metadata/_edit_lock_ = true
+
+[node name="002" parent="BrickMediumArray_001" unique_id=74657133 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.739415, 0.00012207031, -6.157715)
+metadata/_edit_lock_ = true
+
+[node name="003" parent="BrickMediumArray_001" unique_id=564114597 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.0425572, 0.00012207031, -11.700623)
+metadata/_edit_lock_ = true
+
+[node name="004" parent="BrickMediumArray_001" unique_id=711891501 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.5059943, 0.00012207031, -11.700623)
+metadata/_edit_lock_ = true
+
+[node name="005" parent="BrickMediumArray_001" unique_id=706337586 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.044691, 0.00012207031, 10.364807)
+metadata/_edit_lock_ = true
+
+[node name="006" parent="BrickMediumArray_001" unique_id=1612061648 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.0430155, 0.00012207031, 21.661499)
+metadata/_edit_lock_ = true
+
+[node name="007" parent="BrickMediumArray_001" unique_id=1796667547 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.8246555, 0.00012207031, 16.118591)
+metadata/_edit_lock_ = true
+
+[node name="008" parent="BrickMediumArray_001" unique_id=1321608214 instance=ExtResource("10_yoqlw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.5059943, 0.00012207031, 16.118591)
+metadata/_edit_lock_ = true
+
+[node name="ambiental" type="AudioStreamPlayer" parent="." unique_id=1070551262]
+stream = ExtResource("11_d735r")
+script = ExtResource("12_rmtia")
+
+[node name="ambiental_loop" type="AudioStreamPlayer" parent="ambiental" unique_id=18262258]
+stream = ExtResource("11_d735r")
+
+[node name="ambientalLoop" type="Timer" parent="ambiental" unique_id=1900152727]
+wait_time = 71.0
+one_shot = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=302587165]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -368.0
+offset_bottom = 238.0
+grow_horizontal = 0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=118495415]
+handle_input_locally = false
+msaa_3d = 1
+screen_space_aa = 1
+size = Vector2i(360, 230)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+script = ExtResource("13_7ng22")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1314487673]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7.24477, 5.3900146, -17.016304)
+fov = 40.0
+
+[node name="NavigationAreas" type="Node3D" parent="." unique_id=1938397558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20144653, 0)
+
+[node name="walk_001" type="Area3D" parent="NavigationAreas" unique_id=1234024406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.80173)
+script = ExtResource("14_jl51y")
+
+[node name="walk_001" type="CollisionShape3D" parent="NavigationAreas/walk_001" unique_id=1000764735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.053812027, 0, -0.01020813)
+shape = SubResource("BoxShape3D_kui3j")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=1736487003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7594666, 0, 0.54107285)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=707569264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3352408, 0, 0.54107285)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=2025673364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0821948, 0, 0.54107285)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=357791387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7125602, 0, 0.54107285)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=1863779125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7125602, 0, -0.03985977)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=405057170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7125602, 0, -0.6020508)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=1621021117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1009345, 0, -0.6020508)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=875453911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2790217, 0, -0.6020508)
+
+[node name="009" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=1091964855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7782063, 0, -0.6020508)
+
+[node name="010" type="Marker3D" parent="NavigationAreas/walk_001" unique_id=1097413744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7782063, 0, -0.002380371)
+
+[node name="walk_002" type="Area3D" parent="NavigationAreas" unique_id=800509577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26702976, 0, 40.869614)
+script = ExtResource("14_jl51y")
+
+[node name="walk_002" type="CollisionShape3D" parent="NavigationAreas/walk_002" unique_id=1881136479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034229994, 0, 0.048217773)
+shape = SubResource("BoxShape3D_v40pp")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=1213170540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7594666, 0, 0.54107285)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=513480549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3352408, 0, 0.54107285)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=326274554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0821948, 0, 0.54107285)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=1988034728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7125602, 0, 0.54107285)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=648276056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7125602, 0, -0.03985977)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=1313769454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7125602, 0, -0.6020508)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=736699942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1009345, 0, -0.6020508)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=855843673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2790217, 0, -0.6020508)
+
+[node name="009" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=2115066914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7782063, 0, -0.6020508)
+
+[node name="010" type="Marker3D" parent="NavigationAreas/walk_002" unique_id=2027150920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7782063, 0, -0.002380371)
+
+[node name="walk_003" type="Area3D" parent="NavigationAreas" unique_id=2030831910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26702976, 0, -31.660305)
+script = ExtResource("14_jl51y")
+
+[node name="walk_003" type="CollisionShape3D" parent="NavigationAreas/walk_003" unique_id=1667982519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27420616, 0, 0.13346481)
+shape = SubResource("BoxShape3D_jlvy3")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1814638868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.209281, 0, 0.36774063)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=29303451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.945567, 0, 0.36750603)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1185147126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.816597, 0, 1.5397873)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=467180280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7280512, 0, 1.8362255)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=456465362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02074337, 0, 1.8362255)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=500169646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4596272, 0, 1.8362255)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1632057334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09004, 0, 1.5397854)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=915634597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.057316, 0, 0.6235199)
+
+[node name="009" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1491134376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3239174, 0, 0.6235199)
+
+[node name="010" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1435617291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.455774, 0, 0.6235199)
+
+[node name="011" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=273151176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.455774, 0, -0.53528595)
+
+[node name="012" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1837858935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.455774, 0, -1.8288383)
+
+[node name="013" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=16440001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2969685, 0, -1.8288383)
+
+[node name="014" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1613029130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5452843, 0, -1.411129)
+
+[node name="015" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1349680706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4567385, 0, -0.30622292)
+
+[node name="016" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=2049604092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3518295, 0, -0.30622292)
+
+[node name="017" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=765468316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5047629, 0, -0.30622292)
+
+[node name="018" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=379371023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8897479, 0, -0.30622292)
+
+[node name="019" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=250319574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1698236, 0, -0.53528976)
+
+[node name="020" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1480583415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.069727, 0, -1.5054512)
+
+[node name="021" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=59982300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99658, 0, -1.7479897)
+
+[node name="022" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=1884434262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.182335, 0, -1.5054512)
+
+[node name="023" type="Marker3D" parent="NavigationAreas/walk_003" unique_id=365487520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.182335, 0, -0.71045685)
+
+[node name="walk_004" type="Area3D" parent="NavigationAreas" unique_id=829562238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1031065, 0, 36.80824)
+script = ExtResource("14_jl51y")
+
+[node name="walk_004" type="CollisionShape3D" parent="NavigationAreas/walk_004" unique_id=1159862732]
+shape = SubResource("BoxShape3D_u564y")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1989497036]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 8.821186, 0, -0.33350372)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1781704376]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 6.557669, 0, -0.36330795)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1968324090]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 4.4444447, 0, -1.5637436)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=934212058]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 2.3600163, 0, -1.8878708)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1700277221]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -0.38853627, 0, -1.9243507)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=871026471]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -2.8272052, 0, -1.9567146)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=347942397]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -4.461409, 0, -1.6819382)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=663602713]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -6.4406714, 0, -0.7918625)
+
+[node name="009" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1904234215]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -7.7071614, 0, -0.80867386)
+
+[node name="010" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=2054373353]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -8.83892, 0, -0.8236923)
+
+[node name="011" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1304315400]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -8.854299, 0, 0.33501053)
+
+[node name="012" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1870142178]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -8.871466, 0, 1.6284485)
+
+[node name="013" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=92400653]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -7.71276, 0, 1.6438255)
+
+[node name="014" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=824975027]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -5.9556866, 0, 1.2494011)
+
+[node name="015" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=735883642]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -3.8526614, 0, 0.17230988)
+
+[node name="016" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1174122182]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, -2.7478497, 0, 0.18697357)
+
+[node name="017" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1493310971]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 0.10849106, 0, 0.22488403)
+
+[node name="018" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1059450896]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 2.4932663, 0, 0.25653458)
+
+[node name="019" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1507083596]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 3.7701893, 0, 0.5025673)
+
+[node name="020" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=533129224]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 5.65705, 0, 1.49786)
+
+[node name="021" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=343303512]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 7.580515, 0, 1.7659454)
+
+[node name="022" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1823773138]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 8.769383, 0, 1.5391655)
+
+[node name="023" type="Marker3D" parent="NavigationAreas/walk_004" unique_id=1191300150]
+transform = Transform3D(-0.99991196, 0, 0.013271093, 0, 1, 0, -0.013271093, 0, -0.99991196, 8.779933, 0, 0.7442436)
+
+[node name="walk_005" type="Area3D" parent="NavigationAreas" unique_id=681698934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.778394, 0, -26.803585)
+script = ExtResource("14_jl51y")
+
+[node name="walk_005" type="CollisionShape3D" parent="NavigationAreas/walk_005" unique_id=336642002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.7687702)
+shape = SubResource("BoxShape3D_hlfht")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=1243333113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.77243805)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=1562821080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.77243805)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=862588414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.77243805)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=1486751901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.7231789)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=188355406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.7258415)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=536712262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.815506)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=308090894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.815506)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_005" unique_id=9309024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.866642)
+
+[node name="walk_006" type="Area3D" parent="NavigationAreas" unique_id=1944305927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.492275, 0, -26.981045)
+script = ExtResource("14_jl51y")
+
+[node name="walk_006" type="CollisionShape3D" parent="NavigationAreas/walk_006" unique_id=2001391531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -1.6632214)
+shape = SubResource("BoxShape3D_lf3vb")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=1935807932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2167006, 0, -0.64089584)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=1475787390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3696127, 0, -0.64089584)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=1180752080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5583916, 0, -0.64089584)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=575326392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5583916, 0, -1.6185932)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=1001923815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5583916, 0, -2.6085815)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=327505621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3516798, 0, -2.698246)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=292014547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2346334, 0, -2.698246)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_006" unique_id=2118214120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2346334, 0, -1.7620564)
+
+[node name="walk_007" type="Area3D" parent="NavigationAreas" unique_id=378177092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1093712, 0, -23.601734)
+script = ExtResource("14_jl51y")
+
+[node name="walk_007" type="CollisionShape3D" parent="NavigationAreas/walk_007" unique_id=2107592582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_u2s5g")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=1262421786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=1746151552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=313061276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=288976916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=1204380548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=1396869229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=138363126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_007" unique_id=52963766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_008" type="Area3D" parent="NavigationAreas" unique_id=631847587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.679736, 0, -20.032927)
+script = ExtResource("14_jl51y")
+
+[node name="walk_008" type="CollisionShape3D" parent="NavigationAreas/walk_008" unique_id=1768580537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_15syj")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=1206026758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=349671103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=1115350404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=2016053573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=1113003858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=1373453165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=1820331726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_008" unique_id=1547154632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_009" type="Area3D" parent="NavigationAreas" unique_id=843044124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.730133, 0, -19.978228)
+script = ExtResource("14_jl51y")
+
+[node name="walk_009" type="CollisionShape3D" parent="NavigationAreas/walk_009" unique_id=775897546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_e355t")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=1273300634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=128620383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=1375741582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=1394283697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=711956793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=1517218959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=1856892986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_009" unique_id=1487919702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_010" type="Area3D" parent="NavigationAreas" unique_id=1173993863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.478533, 0, -15.655875)
+script = ExtResource("14_jl51y")
+
+[node name="walk_010" type="CollisionShape3D" parent="NavigationAreas/walk_010" unique_id=441653167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.7127409)
+shape = SubResource("BoxShape3D_uk74c")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=651213095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.235931, 0, -0.6979151)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=1145556076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.388843, 0, -0.7179384)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=895260240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577621, 0, -0.71802616)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=1334350353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577621, 0, -1.6779757)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=571361784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577621, 0, -2.7600412)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=1777168038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3709102, 0, -2.7503633)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=391590633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.253864, 0, -2.7407637)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_010" unique_id=1239196665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.253864, 0, -1.8214388)
+
+[node name="walk_011" type="Area3D" parent="NavigationAreas" unique_id=562999344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.627305, 0, -10.008541)
+script = ExtResource("14_jl51y")
+
+[node name="walk_011" type="CollisionShape3D" parent="NavigationAreas/walk_011" unique_id=524547517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.6891308)
+shape = SubResource("BoxShape3D_30vb3")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=1360055682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.6898413)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=413804194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.7212057)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=910497133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.6898413)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=1003853667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.698781)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=441909229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.6387577)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=730123516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.7123632)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=701098102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.7284222)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_011" unique_id=1887408229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8422441)
+
+[node name="walk_012" type="Area3D" parent="NavigationAreas" unique_id=1274187070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.012068, 0, -10.008541)
+script = ExtResource("14_jl51y")
+
+[node name="walk_012" type="CollisionShape3D" parent="NavigationAreas/walk_012" unique_id=2004321002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.6848469)
+shape = SubResource("BoxShape3D_m7us3")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=795963191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.69637775)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=177360763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.6965542)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=200968263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.66972256)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=678837823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.6968155)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=2085324225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.6475973)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=738661207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.6840696)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=1895971609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.670125)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_012" unique_id=742535357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8402786)
+
+[node name="walk_013" type="Area3D" parent="NavigationAreas" unique_id=95866291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.007683, 0, -6.3631053)
+script = ExtResource("14_jl51y")
+
+[node name="walk_013" type="CollisionShape3D" parent="NavigationAreas/walk_013" unique_id=646207507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_5wwnl")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=1924725823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=108525920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=1369979397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=1066868508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=170452074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=1121757615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=1315895921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_013" unique_id=1874772060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_014" type="Area3D" parent="NavigationAreas" unique_id=1139644158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6606264, 0, -7.208459)
+script = ExtResource("14_jl51y")
+
+[node name="walk_014" type="CollisionShape3D" parent="NavigationAreas/walk_014" unique_id=1006166227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_3gg83")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=1588201028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=309797215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=1754351953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=1606218100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=2041510187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=1107745707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=513120220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_014" unique_id=389378185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_015" type="Area3D" parent="NavigationAreas" unique_id=1343186001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.019867, 0, -6.2970634)
+script = ExtResource("14_jl51y")
+
+[node name="walk_015" type="CollisionShape3D" parent="NavigationAreas/walk_015" unique_id=1344565858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_l2keh")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=1442226803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=507109202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=944303360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=1988677969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=763849672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=1915548075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=1437302146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_015" unique_id=581843421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_016" type="Area3D" parent="NavigationAreas" unique_id=787434621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3124905, 0, -4.4904575)
+script = ExtResource("14_jl51y")
+
+[node name="walk_010" type="CollisionShape3D" parent="NavigationAreas/walk_016" unique_id=192173616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.7328205)
+shape = SubResource("BoxShape3D_8tiih")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=1045349173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.75923634)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=2036792052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.75899696)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=660438083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.75923634)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=78652501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.660428)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=1773136330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.6708946)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=1033921498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.742548)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=680952466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.760559)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_016" unique_id=395104624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8038912)
+
+[node name="walk_017" type="Area3D" parent="NavigationAreas" unique_id=424801517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8034935, 0, 3.60893)
+script = ExtResource("14_jl51y")
+
+[node name="walk_017" type="CollisionShape3D" parent="NavigationAreas/walk_017" unique_id=996495015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_8at4v")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=1464925698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=1440353010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=126150327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=633036907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=1288996635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=2074326631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=704688781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_017" unique_id=1412380943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_018" type="Area3D" parent="NavigationAreas" unique_id=2091736931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4450817, 0, 3.5621214)
+script = ExtResource("14_jl51y")
+
+[node name="walk_018" type="CollisionShape3D" parent="NavigationAreas/walk_018" unique_id=584307625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_6g3sy")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=1977234766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=1877709366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=1483640423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=1107034364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=1943570310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=919370641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=296432477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_018" unique_id=64368399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_019" type="Area3D" parent="NavigationAreas" unique_id=120268470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.877533, 0, 11.75289)
+script = ExtResource("14_jl51y")
+
+[node name="walk_019" type="CollisionShape3D" parent="NavigationAreas/walk_019" unique_id=1156216479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_t5pm8")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=213821909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=2046195012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=309267004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=1759337083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=1275915792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=333690426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=617594655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_019" unique_id=1687454287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_020" type="Area3D" parent="NavigationAreas" unique_id=300736198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.077934, 0, 10.52005)
+script = ExtResource("14_jl51y")
+
+[node name="walk_020" type="CollisionShape3D" parent="NavigationAreas/walk_020" unique_id=1533926114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_gmeeg")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=1246558571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=1314368273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=1190979310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=66635995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=1704668954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=1229378862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=1739168718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_020" unique_id=995176575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_021" type="Area3D" parent="NavigationAreas" unique_id=1025093262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8761473, 0, 18.519577)
+script = ExtResource("14_jl51y")
+
+[node name="walk_021" type="CollisionShape3D" parent="NavigationAreas/walk_021" unique_id=1280027223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_gmeeg")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=1635834627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=1483411596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=814541713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=249809830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=879358000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=1612912180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=1401853958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_021" unique_id=1338200468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_022" type="Area3D" parent="NavigationAreas" unique_id=966421224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43925, 0, 12.106674)
+script = ExtResource("14_jl51y")
+
+[node name="walk_022" type="CollisionShape3D" parent="NavigationAreas/walk_022" unique_id=394131431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.7213573)
+shape = SubResource("BoxShape3D_mto4t")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=1160096783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.7784786)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=2132475305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.7784786)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=661377696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.7784786)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=2061560351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.6610003)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=1764167322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.6633625)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=1235825299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.753027)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=541521990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.753027)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_022" unique_id=548654323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8044634)
+
+[node name="walk_023" type="Area3D" parent="NavigationAreas" unique_id=2035912685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.778394, 0, 33.897102)
+script = ExtResource("14_jl51y")
+
+[node name="walk_023" type="CollisionShape3D" parent="NavigationAreas/walk_023" unique_id=1977820724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.728302)
+shape = SubResource("BoxShape3D_oy21u")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=1547048552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.6236954)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=1957059591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.6236954)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=1245149952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.6236954)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=1936668238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.6760292)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=959842222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.803112)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=1437755336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.8927765)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=48036334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.8927765)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_023" unique_id=1857211806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8194923)
+
+[node name="walk_024" type="Area3D" parent="NavigationAreas" unique_id=623803117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.485767, 0, 33.855114)
+script = ExtResource("14_jl51y")
+
+[node name="walk_024" type="CollisionShape3D" parent="NavigationAreas/walk_024" unique_id=1181543463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4093742, 0, -1.6272163)
+shape = SubResource("BoxShape3D_4lelf")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=1808412443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.6129074)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=1541192652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.6129074)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=1647367359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60022354, 0, -0.6129074)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=220444536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60022354, 0, -1.6445961)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=235347892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60022354, 0, -2.6898804)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=1194761932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.7795448)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=340893719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.7795448)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_024" unique_id=509888594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.7880592)
+
+[node name="walk_025" type="Area3D" parent="NavigationAreas" unique_id=2078788187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.431848, 0, 17.78068)
+script = ExtResource("14_jl51y")
+
+[node name="walk_025" type="CollisionShape3D" parent="NavigationAreas/walk_025" unique_id=1951530742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.6565266)
+shape = SubResource("BoxShape3D_i201o")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=1481916054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, -0.6247902)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=1575822399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.6901531)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=589445816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.6901512)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=748328067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.6738434)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=270122429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.5807095)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=626523314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.7342415)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=1936690140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.670374)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_025" unique_id=1393773121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8173065)
+
+[node name="walk_026" type="Area3D" parent="NavigationAreas" unique_id=1912815883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.926758, 0, 17.78068)
+script = ExtResource("14_jl51y")
+
+[node name="walk_026" type="CollisionShape3D" parent="NavigationAreas/walk_026" unique_id=839817303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.7837238)
+shape = SubResource("BoxShape3D_2q4jp")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=181918518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.204576, 0, -0.7508011)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=462963516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.72402954)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=1397475448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.7508011)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=2024816929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.6299095)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=644691707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.6394997)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=2018727378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.7291641)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=1122747292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.7291641)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_026" unique_id=50491112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.7733727)
+
+[node name="walk_027" type="Area3D" parent="NavigationAreas" unique_id=233861804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41318035, 0, 23.266207)
+script = ExtResource("14_jl51y")
+
+[node name="walk_027" type="CollisionShape3D" parent="NavigationAreas/walk_027" unique_id=1161901140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4131308, 0, -1.6407604)
+shape = SubResource("BoxShape3D_aru28")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=564361456]
+transform = Transform3D(0.9999996, 0, -0.00088462257, 0, 1, 0, 0.00088462257, 0, 0.9999996, -4.2585325, 0, -0.600626)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=1974156654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4114447, 0, -0.58691597)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=2002928015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -0.6272793)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=440074217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -1.660429)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=368953870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6002226, 0, -2.5844975)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=463935862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3935118, 0, -2.6738071)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=2116380769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -2.674162)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_027" unique_id=1886169148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2764654, 0, -1.8038921)
+
+[node name="walk_028" type="Area3D" parent="NavigationAreas" unique_id=1394979435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1023035, 0, 25.070316)
+script = ExtResource("14_jl51y")
+
+[node name="walk_028" type="CollisionShape3D" parent="NavigationAreas/walk_028" unique_id=516991162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_gflku")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=143411200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=1458018281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=599371220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=186464827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=890179085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=913988483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=66269736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_028" unique_id=1302416253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_029" type="Area3D" parent="NavigationAreas" unique_id=2141030724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.365094, 0, 24.398464)
+script = ExtResource("14_jl51y")
+
+[node name="walk_028" type="CollisionShape3D" parent="NavigationAreas/walk_029" unique_id=985383096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.395731, 0, -0.7116852)
+shape = SubResource("BoxShape3D_yesqg")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=1399128190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=1069055640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=508441001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=679176523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=135267087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=1412581867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=198227848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_029" unique_id=1161538562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_030" type="Area3D" parent="NavigationAreas" unique_id=2080555666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.118166, 0, 31.35248)
+script = ExtResource("14_jl51y")
+
+[node name="walk_030" type="CollisionShape3D" parent="NavigationAreas/walk_030" unique_id=1802586145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3482306, 0, -0.7562294)
+shape = SubResource("BoxShape3D_ebf02")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=1855181108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2585325, 0, 0.83615494)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=1606509606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.315341, 0, 0.83615494)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=707900125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, 0.83615494)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=124181360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -0.6854019)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=900539393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57380104, 0, -2.3536148)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=1471218356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4069986, 0, -2.4086113)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=1549080783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -2.4086113)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_030" unique_id=217764403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2218657, 0, -0.5937443)
+
+[node name="walk_031" type="Area3D" parent="NavigationAreas" unique_id=292928131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.118166, 0, 2.0717578)
+script = ExtResource("14_jl51y")
+
+[node name="walk_031" type="CollisionShape3D" parent="NavigationAreas/walk_031" unique_id=1990768253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.172577, 0, -1.02447)
+shape = SubResource("BoxShape3D_7b12v")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1729325629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0406299, 0, -0.065018415)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1958382439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1504061, 0, -0.06784463)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1832454867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3692222, 0, -0.06784463)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1650055966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2852395, 0, -1.1185801)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1204560839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2852395, 0, -1.9759723)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=2078902419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1503694, 0, -1.9759723)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1353787799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0574179, 0, -1.9759723)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_031" unique_id=1237920870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0574179, 0, -0.9517876)
+
+[node name="walk_032" type="Area3D" parent="NavigationAreas" unique_id=1145194677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9865122, 0, 4.425439)
+script = ExtResource("14_jl51y")
+
+[node name="walk_032" type="CollisionShape3D" parent="NavigationAreas/walk_032" unique_id=56861390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1243243, 0, -0.8739214)
+shape = SubResource("BoxShape3D_b6mrq")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=1958273292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.768108, 0, -0.09631491)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=945290835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0600536, 0, -0.09631491)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=2022357614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4501712, 0, -0.09631491)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=730757216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4501712, 0, -0.8589864)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=805195960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4501712, 0, -1.6498241)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=633388021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0639355, 0, -1.6498241)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=881729375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7754595, 0, -1.6498241)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_032" unique_id=1170277796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7754595, 0, -0.923048)
+
+[node name="walk_033" type="Area3D" parent="NavigationAreas" unique_id=1511693525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03416109, 0, 4.425439)
+script = ExtResource("14_jl51y")
+
+[node name="walk_033" type="CollisionShape3D" parent="NavigationAreas/walk_033" unique_id=1436222875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.017376, 0, -0.8739214)
+shape = SubResource("BoxShape3D_wwd1l")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=332100575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6806755, 0, -0.09631491)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=1452348172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9726212, 0, -0.09631491)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=478871408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.362739, 0, -0.09631491)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=180297265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.362739, 0, -0.8589864)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=992167215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.362739, 0, -1.6498241)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=1901777836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9765031, 0, -1.6498241)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=51907478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6880271, 0, -1.6498241)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_033" unique_id=1741174870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6880271, 0, -0.923048)
+
+[node name="walk_034" type="Area3D" parent="NavigationAreas" unique_id=683696308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.118166, 0, 2.0717578)
+script = ExtResource("14_jl51y")
+
+[node name="walk_034" type="CollisionShape3D" parent="NavigationAreas/walk_034" unique_id=1442575088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1424937, 0, 4.026446)
+shape = SubResource("BoxShape3D_krixw")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=1210737947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0406299, 0, 4.986506)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=1560013344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1504061, 0, 4.9836793)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=1323160152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3692222, 0, 4.9836793)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=2037305049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2852395, 0, 3.9329438)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=318289141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2852395, 0, 3.075552)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=1313145092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1503694, 0, 3.075552)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=514310394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0574179, 0, 3.075552)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_034" unique_id=1183800730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0574179, 0, 4.0997367)
+
+[node name="walk_035" type="Area3D" parent="NavigationAreas" unique_id=1675964158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.006855, 0, 4.425439)
+script = ExtResource("14_jl51y")
+
+[node name="walk_035" type="CollisionShape3D" parent="NavigationAreas/walk_035" unique_id=2113031708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0708501, 0, -0.8739214)
+shape = SubResource("BoxShape3D_xnnfk")
+
+[node name="001" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=1579305312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7493842, 0, -0.09631491)
+
+[node name="002" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=1200775464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0413299, 0, -0.09631491)
+
+[node name="003" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=942584513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4314476, 0, -0.09631491)
+
+[node name="004" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=1490565540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4314476, 0, -0.8589864)
+
+[node name="005" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=1703284012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4314476, 0, -1.6498241)
+
+[node name="006" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=974050454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0452118, 0, -1.6498241)
+
+[node name="007" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=796783462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7567358, 0, -1.6498241)
+
+[node name="008" type="Marker3D" parent="NavigationAreas/walk_035" unique_id=405310095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7567358, 0, -0.923048)
+
+[node name="RandomPoints" type="Node3D" parent="." unique_id=39866334]
+
+[node name="001" type="Marker3D" parent="RandomPoints" unique_id=1534232202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -37.666252)
+
+[node name="002" type="Marker3D" parent="RandomPoints" unique_id=365902626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.141717, 0, -37.666252)
+
+[node name="003" type="Marker3D" parent="RandomPoints" unique_id=1614959439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.145051, 0, -31.873535)
+
+[node name="004" type="Marker3D" parent="RandomPoints" unique_id=1450522548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8923187, 0, -25.899849)
+
+[node name="005" type="Marker3D" parent="RandomPoints" unique_id=147854330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.316457, 0, -25.899849)
+
+[node name="006" type="Marker3D" parent="RandomPoints" unique_id=978443476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.841835, 0, -19.4528)
+
+[node name="007" type="Marker3D" parent="RandomPoints" unique_id=1703097453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3909645, 0, -19.4528)
+
+[node name="008" type="Marker3D" parent="RandomPoints" unique_id=362660728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.356041, 0, -19.4528)
+
+[node name="009" type="Marker3D" parent="RandomPoints" unique_id=1028899580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.810089, 0, -11.350985)
+
+[node name="010" type="Marker3D" parent="RandomPoints" unique_id=469595352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.724438, 0, -6.01957)
+
+[node name="011" type="Marker3D" parent="RandomPoints" unique_id=359674436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.225204, 0, 3.6652093)
+
+[node name="012" type="Marker3D" parent="RandomPoints" unique_id=1914918512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.225204, 0, 21.091053)
+
+[node name="013" type="Marker3D" parent="RandomPoints" unique_id=1373560239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.059856, 0, 17.200712)
+
+[node name="014" type="Marker3D" parent="RandomPoints" unique_id=1335734446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9855995, 0, 27.804653)
+
+[node name="015" type="Marker3D" parent="RandomPoints" unique_id=1120758422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.492107, 0, 34.504475)
+
+[node name="016" type="Marker3D" parent="RandomPoints" unique_id=2105501217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.144333, 0, 38.786896)
+
+[node name="017" type="Marker3D" parent="RandomPoints" unique_id=409062492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.094299, 0, 42.06888)
+
+[node name="018" type="Marker3D" parent="RandomPoints" unique_id=1326725711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.84793663, 0, 44.364197)
+
+[node name="ai_player" parent="." unique_id=1417775963 instance=ExtResource("15_bfk50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.652451, 0.05131868, -0.9017296)
+
+[node name="player" parent="." unique_id=1888700348 instance=ExtResource("16_h0dtm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6653681, 0.05189855, -5.8612676)
