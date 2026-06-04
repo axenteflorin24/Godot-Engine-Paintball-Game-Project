@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://coue2qehpn4fr"]
+
+[ext_resource type="PackedScene" uid="uid://c5i71edp2v2yb" path="res://Scenes/Scene_1/scene_1.tscn" id="1_1r6ip"]
+[ext_resource type="Script" uid="uid://cp2f0e153peuy" path="res://Scenes/Main/Scripts/main.gd" id="1_lixft"]
+
+[node name="main" type="Node3D" unique_id=1412364900]
+script = ExtResource("1_lixft")
+
+[node name="MainMenu" type="Control" parent="." unique_id=1238939462]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="scene_1" parent="." unique_id=2100328954 instance=ExtResource("1_1r6ip")]
