@@ -1,6 +1,7 @@
 # Godot Engine Paintball Game Project
 
 <b><span style="color:#883333">Status: in development and update of changes</span></b>
+
 Warning! This project is open source, these examples are basic and for educational use to generate your own mechanisms and save time creating them, and are not a final product ready for sale.</b>
 
 
