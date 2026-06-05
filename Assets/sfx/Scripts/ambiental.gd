@@ -11,18 +11,31 @@ func _process(delta: float) -> void:
 	var _delta = delta
 
 	if $ambientalLoop.is_stopped():
-		
+		var logical = true
 		if track == "A":
+			
+			logical = false
 			track = "B"
+			
 			$"ambiental_loop".set("volume_db", "-8.0")
+			
 			$"ambiental_loop".play()
+			
 			$".".set("volume_db", "-80.0")
+			
 			$".".stop()
 		
-		if track == "B":
+		
+		if track == "B" and logical==true:
+			
 			track = "A"
+			
 			$".".set("volume_db", "-8.0")
+			
 			$".".play()
+			
 			$"ambiental_loop".set("volume_db", "-80.0")
+			
 			$"ambiental_loop".stop()
+		
 		$ambientalLoop.start()
